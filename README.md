@@ -1,8 +1,8 @@
 # docker-log
 
-This is demo project based on 
- - official image nginx 
- - custom build of rsyslog **panoptix/rsyslog
+This is demo project based on
+ - official image nginx
+ - custom build of rsyslog **panoptix/rsyslog**
 
 ##USAGE
 ####START
