@@ -10,6 +10,6 @@ This is demo project based on
 - **curl localhost 80** - this command will request web page on nginx and access log will be transfered to the main log server
 
 ####STOP
-- **docker-compose down
+- **docker-compose down**
 
 **Change name of main logging server we can at file logentries.conf**
