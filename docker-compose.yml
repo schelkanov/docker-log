@@ -1,0 +1,27 @@
+rsyslog:
+  image: panoptix/rsyslog
+  ports:
+    - "10514:10514"
+    - "10514:10514/udp"
+  volumes:
+      - ./rsyslog.conf:/etc/rsyslog.conf
+
+rsyslog_fwd:
+  image: panoptix/rsyslog
+  ports:
+    - "514:514"
+    - "514:514/udp"
+  volumes:
+    - ./logentries.conf:/etc/rsyslog.d/logentries.conf
+  links:
+      - rsyslog
+
+nginx:
+  image: nginx
+  ports:
+    - "80:80"
+  links:
+      - rsyslog_fwd
+  log_driver: syslog
+  log_opt:
+    syslog-address: "tcp://127.0.0.1:514"
