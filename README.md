@@ -13,3 +13,7 @@ This is demo project based on
 - **docker-compose down**
 
 **Change name of main logging server we can at file logentries.conf**
+
+**if we didn't use rsyslog how else could we ship these logs? Do you have experience with other logging systems that are more advanced such as fluentd?**
+
+For shipping logs we can use Filebeat and I have experience with this tool. 
